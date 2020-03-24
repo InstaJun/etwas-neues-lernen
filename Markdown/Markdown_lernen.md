@@ -1,4 +1,4 @@
-
+[TOC]
 
 
 
@@ -61,17 +61,26 @@ Markdown编辑器，能将字符转换，呈现我们
 
 > [少数派](https://sspai.com)  &rarr; 插入链接
 >
-> ![](https://cdn.sspai.com/attachment/thumbnail/2016/11/04/264631b984633898c415a818b181e5205653e_mw_640.jpg)&rarr;插入图片
+> ![](https://cdn.sspai.com/attachment/thumbnail/2016/11/04/264631b984633898c415a818b181e5205653e_mw_640.jpg )
+> <center>题注</center>
 >
->  
+> &rarr;插入图片
+>
 
-用到时候翻看文
+
+
+**加入题注**
+
+`<center>Abbildung</center>`
+
 
 
 
 ## 3. Markdown 进阶 ##
 
 ### 3.1 对基本语法的扩展 ### 
+
+**引用（Quoting）**
 
 ```
 Quoting Code
@@ -86,17 +95,24 @@ Use ` git status ` to list all new or modified files that haven't yet been commi
 insert Tabelle 
 
 	| First Header | Second Header |
-	| ------------ | ------------  |
+	| :------------ | :------------:  | :剧中:
 	| Content cell | Content Cell  |
 	
 ```
 
 | First Header | Second Header |
-| ------------ | ------------- |
+| :------------ | :-------------: |
 | Content cell | content cell  |
 | Content cell| content cell|
 
+**目录列表(Table of Contents)**
+>[TOC] 
 
+$\uparrow$
+U~in~
+$e^2$
+
+/Delta
 
 ### 3.2 对通用语法的修改 ###
 
@@ -123,3 +139,6 @@ insert Tabelle
 
 :joy:
 
+## 参考 ##
+1. [Typora 完全使用详解 ](https://sspai.com/post/54912)
+2. 
