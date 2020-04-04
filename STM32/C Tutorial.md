@@ -66,6 +66,11 @@ int main(void)/*int 表示函数返回一个整数值，void表示函数不接�
 |%s|打印一个字符串|
 |\n|换行|
 
+`printf函数`执行格式化的输出，格式字符串包含 格式代码（如上表格）+ 普通字符。每个格式代码按照后续参数的指定值打印
+
+
+
+
 
 
 **read_column_number函数**
@@ -200,6 +205,20 @@ printf("Delete file (are you really sure??):");
 
 Identifier标识符，就是变量，函数，类型等的名字。C区分大小写
 
+
+
+警告！！！
+
+需要小心，使用`&&`操作符执行"逻辑与"，相似的`&`操作符只行"按位与"
+需要小心，使用`==`操作符执行判断两个表达式是否相等，相似的`=`操作符为"赋值操作符"
+
+|操作符|功能|
+|--|--|
+|&&|逻辑与|
+|&|按位与|
+|==|判断是否相等|
+|=|赋值|
+
 ## 程序风格
 
 合理使用空格，强调程序的结构。
@@ -211,6 +230,72 @@ Identifier标识符，就是变量，函数，类型等的名字。C区分大小
 <img src="D:\00_LUH\ET-INF\was_neues_lernen_Zusammenfassung\STM32\image-20200403191632375.png" alt="image-20200403191632375" style="zoom:50%;" />
 
 第二个程序更容易发现while循环缺少右花括号。
+
+
+## 数据类型
+### 整型家族
+整型家族包含有：
+- 字符(char)
+
+- 短整型(short int)
+
+- 整型(int)
+
+- 长整型(long int)
+  每个类型都含有**有符号(signed)**和**无符号(unsigned)**。
+
+  <img src="D:\00_LUH\ET-INF\was_neues_lernen_Zusammenfassung\STM32\image-20200404173608808.png" alt="image-20200404173608808" style="zoom:50%;" />
+
+short int 至少16位，long int至少32位bits，int型位数取决于编译器
+
+### 浮点类型
+用来存储向像$3.13159$和$6.023\times10^{23}$无法按照整数的数
+
+`说明符`包含有：
+- float
+- double
+- long double
+
+### 指针(Pointer)
+指针可以实现诸如tree和list这类高级数据结构。
+变量的值存储在内存当中的某个特定的位置，每个位置又是由地址唯一确定并引用。类似于，街道上房门都有相对应的门牌号(地址)，指针只是地址的另一个名字。`指针变量`是一个值为另外一个内存地址的变量。
+
+### 基本申明
+#### 初始化
+~~~c
+int j = 15;
+~~~
+#### 声明简单数组
+#### 声明指针
+~~~c
+int *a;
+~~~
+表达式\*a产生的结果类型是int。`*`作为间接寻址操作符。
+
+### typedef
+允许为各种数据类型定义新名字
+比如
+~~~c
+char  *ptr_to_char;
+~~~
+表示把变量ptr_to_char声明为一个指向字符的指针。添加typedef后
+~~~c
+typedef char *ptr_to_char;
+ptr_to_char a
+~~~
+声明a是一个指向字符的指针。
+
+## 常量
+~~~c
+int const pi = 3.14159;
+~~~
+
+## 语句
+
+
+
+
+
 
 ## 函数
 `main函数`
@@ -254,6 +339,19 @@ int main()
 【说明】getchar()非真正函数，而是getc(stdin)宏定义。
 
 
+
+`putchar()`
+	头文件：#include <stdio.h>
+
+ 	函数putchar()用于将给定的字符输出到控制台，其原型如下：
+ 	
+>int putchar (int ch);
+
+ 【参数】ch为要输出的字符。
+
+ 【返回值】输出成功，返回该字符的ASCII码值，否则返回EOF。
+
+ 【说明】：putchar()非真正函数，而是putc(ch, stdout)宏定义
 
 
 

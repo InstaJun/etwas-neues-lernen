@@ -330,6 +330,8 @@ s_x
 
 [Unicode-Zeichentabelle](https://unicode-table.com/de/search/?q=%E6%8B%89%E4%B8%81)
 
+[LaTeX Math Symbols](https://www.math.uci.edu/~xiangwen/pdf/LaTeX-Math-Symbols.pdf)
+
 ### 2. Emoji ###
 
 [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/)
